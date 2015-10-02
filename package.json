@@ -1,6 +1,7 @@
 {
   "name": "flipclock",
   "version": "0.7.8",
+  "main": "compiled/flipclock.js",
   "email": "support@objectivehtml.com",
   "author": "Objective HTML, LLC <support@objectivehtml.com>",
   "license": "MIT",

@@ -244,18 +244,22 @@
 		 
 		loadLanguage: function(name) {	
 			var lang;
-			
-			if(FlipClock.Lang[name.ucfirst()]) {
-				lang = FlipClock.Lang[name.ucfirst()];
+
+			if (typeof name === "object" && name !== null) {
+				return this.lang = name;
+			} else {
+				if(FlipClock.Lang[name.ucfirst()]) {
+					lang = FlipClock.Lang[name.ucfirst()];
+				}
+				else if(FlipClock.Lang[name]) {
+					lang = FlipClock.Lang[name];
+				}
+				else {
+					lang = FlipClock.Lang[this.defaultLanguage];
+				}
+				
+				return this.lang = lang;
 			}
-			else if(FlipClock.Lang[name]) {
-				lang = FlipClock.Lang[name];
-			}
-			else {
-				lang = FlipClock.Lang[this.defaultLanguage];
-			}
-			
-			return this.lang = lang;
 		},
 					
 		/**

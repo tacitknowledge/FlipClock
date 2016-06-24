@@ -4,6 +4,8 @@
 	License: http://www.opensource.org/licenses/mit-license.php
 */
 
+module.exports = function(jQuery) {
+
 var Base = function() {
 	// dummy
 };
@@ -2903,3 +2905,5 @@ var FlipClock;
 	FlipClock.Lang['chinese'] = FlipClock.Lang.Chinese;
 
 }(jQuery));
+
+}

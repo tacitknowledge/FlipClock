@@ -14,8 +14,6 @@
                 this.factory.separatorClass = options.separator === "." ?
                     this.factory.classes.dot :
                     this.factory.classes.comma;
-
-                this.spyScroll();
             },
             createDivider: function() {
                 var dots = [
@@ -100,19 +98,6 @@
                 if (doFlip) {
                     this.factory.flip();
                 }
-            },
-
-            spyScroll: function() {
-                var $el = this.factory.$el,
-                    self = this;
-
-                $el.bind("inview", function(event, visible) {
-                    if (visible) {
-                        self.countUp();
-                    } else {
-                        $el.unbind("inview");
-                    }
-                });
             }
         });
 	

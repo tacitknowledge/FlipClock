@@ -4,8 +4,7 @@
 	License: http://www.opensource.org/licenses/mit-license.php
 */
 
-module.exports = function(jQuery) {
-
+module.exports = function (jQuery) {
 var Base = function() {
 	// dummy
 };
@@ -2297,8 +2296,6 @@ var FlipClock;
                 this.factory.separatorClass = options.separator === "." ?
                     this.factory.classes.dot :
                     this.factory.classes.comma;
-
-                this.spyScroll();
             },
             createDivider: function() {
                 var dots = [
@@ -2383,19 +2380,6 @@ var FlipClock;
                 if (doFlip) {
                     this.factory.flip();
                 }
-            },
-
-            spyScroll: function() {
-                var $el = this.factory.$el,
-                    self = this;
-
-                $el.bind("inview", function(event, visible) {
-                    if (visible) {
-                        self.countUp();
-                    } else {
-                        $el.unbind("inview");
-                    }
-                });
             }
         });
 	
@@ -2905,5 +2889,4 @@ var FlipClock;
 	FlipClock.Lang['chinese'] = FlipClock.Lang.Chinese;
 
 }(jQuery));
-
 }
